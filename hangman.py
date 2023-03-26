@@ -1,8 +1,12 @@
-
 import random
-import urllib.request
 
-word_list = ('ant baboon badger bat bear beaver camel cat clam cobra cougar '
+word_list_bugs = ('ant beetle butterfly bedbug bee bumblebee caterpillar cicada '
+                  'cockroach cricket dragonfly firefly flea fly gnat grasshopper '
+                  'hornet junebug ladybug larva lice locust maggot mantis mayfly '
+                  'mosquito moth roach scarab silkworm silverfish spider stickbug '
+                  'termite wasp waterbug weevil').split()
+
+word_list_animals = ('baboon badger bat bear beaver camel cat clam cobra cougar '
          'coyote crow deer dog donkey duck eagle ferret fox frog goat '
          'goose hawk lion lizard llama mole monkey moose mouse mule newt '
          'otter owl panda parrot pigeon python rabbit ram rat raven '
@@ -10,27 +14,23 @@ word_list = ('ant baboon badger bat bear beaver camel cat clam cobra cougar '
          'stork swan tiger toad trout turkey turtle weasel whale wolf '
          'wombat zebra ').split()
 
+# word_list_misc = 
+
+word_list = [word_list_animals, word_list_bugs]
+
 
 hangman_pics = ["\n\n", "\n\n\n\n\n\n=========", 
         "\n      |\n      |\n      |\n      |\n      |\n=========",
-
         "  +---+\n      |\n      |\n      |\n      |\n      |\n=========",
-
         "  +---+\n  |   |\n      |\n      |\n      |\n      |\n=========", 
-
         "  +---+\n  |   |\n  O   |\n      |\n      |\n      |\n=========",
-
         "  +---+\n  |   |\n  O   |\n  |   |\n      |\n      |\n=========",
-
         "  +---+\n  |   |\n  O   |\n /|   |\n      |\n      |\n=========", 
-
         "  +---+\n  |   |\n  O   |\n /|\  |\n      |\n      |\n=========",
-
         "  +---+\n  |   |\n  O   |\n /|\  |\n /    |\n      |\n=========",
-
         "  +---+\n  |   |\n  O   |\n /|\  |\n / \  |\n      |\n========="] 
 
-
+# Hangman Ascii Art from : https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c
 
 
 def main():
@@ -39,20 +39,27 @@ def main():
     print('''
 ==============================================================
 
-*     *     *     *    *     *****   *     *     *     *    *
-*     *    * *    **   *   **    *   **   **    * *    **   *
-*     *    * *    * *  *  *          * * * *    * *    * *  *
-*******   *****   *  * *  *    ****  *  *  *   *****   *  * *
-*     *  *     *  *   **   **    **  *     *  *     *  *   **
-*     *  *     *  *    *    ******   *     *  *     *  *    *
+*     *     *     *    *     ****   *     *     *     *    *
+*     *    * *    **   *   **   *   **   **    * *    **   *
+*     *    * *    * *  *  *         * * * *    * *    * *  *
+*******   *****   *  * *  *   ****  *  *  *   *****   *  * *
+*     *  *     *  *   **   **   **  *     *  *     *  *   **
+*     *  *     *  *    *    *****   *     *  *     *  *    *
 
 ==============================================================
 
 ''')
 
-    while restart_game != "no":
-        random_word = random.choice(word_list)
-        guessed_words = ""
+    while restart_game != "no" and restart_game != "n":
+        theme = input("\nChoose theme: Input number or press Enter for random\n 1) Animals\n 2) Bugs\n\n")
+        if theme == "1":
+            random_word = random.choice(word_list_animals)
+        elif theme == "2":
+            random_word = random.choice(word_list_bugs)
+        else:
+            random_word = random.choice(random.choice(word_list))
+        
+        guessed_words = []
         word = len(random_word)*"_ "
         i = 0
         guess_word = word.split()
@@ -62,7 +69,7 @@ def main():
                 print(f"\nYou win! The word is {random_word}.")
                 break
             print(f"\n\n{word}")
-            print(f"\nGuessed: {guessed_words}")
+            print(f"\nGuessed: {', '.join(guessed_words)}")
             # Prompts player to input their guess
             player_guess = str(input("\nInput guess: ")).lower()
             # If player's guess is the word
@@ -86,13 +93,15 @@ def main():
                     i += 1
                     # Prints hangman image
                     print(f"\n{player_guess} is not right!\n\n{hangman_pics[i]}.")
-                guessed_words += player_guess + ", "
+                guessed_words.append(player_guess)
             # If player enters invalid response
             else:
                 print("\nInvalid input")
         if i == 10:
-            print(f"\n\nBoo! You Lost!\n Th word is {random_word}")
-        restart_game = input("\n\nRestart Game? [y/n]\n")
+            print(f"\n\nBoo! You Lost!\nThe word is {random_word}")
+        restart_game = input("\n\nRestart Game? [y/n]\n").lower().strip()
+    if restart_game == "no" or restart_game == "n":
+        print("\nThanks for playing! (＾∀＾）ゞ\n")
 
 
 if __name__ == "__main__":
