@@ -2,8 +2,7 @@ import random
 import wordlists as wl
 
 
-# word_list = [word_list_animals, word_list_places, word_list_misc]
-word_list = [wl.word_list_animals, wl.word_list_misc]
+word_list = [wl.word_list_animals, wl.word_list_food, wl.word_list_countries, wl.word_list_misc]
 
 '''
 hangman_pics = ["\n\n", "\n\n\n\n\n\n=========", 
@@ -50,8 +49,8 @@ def main():
         stop_flag = False
         while not stop_flag:
             theme = input("\nChoose theme: Input number or press Enter for random\n 1) Animals and Bugs"
-                          "\n 2) Miscellaneous Words\n\n")
-            if theme in ["1", "2"]:
+                          "\n 2) Food and Drink\n 3)Countries\n 4) Miscellaneous Words\n\n")
+            if theme in ["1", "2", "3", "4"]:
                 random_word = random.choice(word_list[int(theme) - 1])
                 stop_flag = True
             elif theme == "":
