@@ -28,7 +28,7 @@ word_list_food = ('apple banana cherry orange lemon grap mango watermelon ramen 
                   'apricot cauliflower broccoli pumpkin asparagus shallot tofu flour peas kale jackfruit '
                   'pomegranate starfruit lime corn artichoke avocado celery radish daikon leek parsnip '
                   'rhubarb squash chestnut almond macadamia cashew hazelnut pecan pistachio sesame walnut '
-                  'nutmeg ').split
+                  'nutmeg miso eggnog cilantro ').split()
 
 word_list_countries = ('Afghanistan Albania Algeria Andorra Angola Argentina Armenia Australia Austria Azerbaijan '
                     'Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bhutan Bolivia Bosnia '
@@ -45,7 +45,7 @@ word_list_countries = ('Afghanistan Albania Algeria Andorra Angola Argentina Arm
                     'Switzerland Syria Tajikistan Tanzania Thailand Togo Tonga Tunisia Turkey Turkmenistan Tuvalu Uganda '
                     'Ukraine UnitedArabEmirates UnitedKingdom England Britain America Uruguay Uzbekistan Vanuatu VaticanCity '
                     'Venezuela Vietnam Yemen Zambia Zimbabwe '
-                    '').split()
+                    '').lower().split()
 
 word_list_misc = ('about, above, abuse, accept, accident, accuse, across, activist, actor, administration, '
                   'admit, adult, advertise, advise, affect, afraid, after, again, against, agency, aggression, '

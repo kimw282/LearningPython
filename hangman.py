@@ -49,7 +49,7 @@ def main():
         stop_flag = False
         while not stop_flag:
             theme = input("\nChoose theme: Input number or press Enter for random\n 1) Animals and Bugs"
-                          "\n 2) Food and Drink\n 3)Countries\n 4) Miscellaneous Words\n\n")
+                          "\n 2) Food and Drink\n 3) Countries\n 4) Miscellaneous Words\n\n")
             if theme in ["1", "2", "3", "4"]:
                 random_word = random.choice(word_list[int(theme) - 1])
                 stop_flag = True
@@ -71,7 +71,7 @@ def main():
             print(f"\n\n{word}")
             print(f"\nGuessed: {', '.join(sorted(guessed_words))}")
             # Prompts player to input their guess
-            player_guess = str(input("\nInput guess: ")).lower()
+            player_guess = str(input("\nGuess a word or character: ")).lower()
             # If player's guess is the word
             if player_guess == random_word.lower():
                 print(f"\nYou win! The word is {random_word}.")
