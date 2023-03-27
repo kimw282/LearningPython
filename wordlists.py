@@ -1,6 +1,6 @@
 
 word_list_animals = ('baboon badger bat bear beaver buffalo camel cat clam cobra cougar '
-         'coyote crow deer dog donkey duck eagle ferret fox frog goat '
+         'coyote chicken crow deer dog donkey duck eagle ferret fox frog goat '
          'goose hawk lion lizard llama mole monkey moose mouse mule newt '
          'otter owl panda parrot pigeon python rabbit ram rat raven '
          'rhino salmon seal shark sheep skunk sloth snake spider '
@@ -12,8 +12,25 @@ word_list_animals = ('baboon badger bat bear beaver buffalo camel cat clam cobra
          'mosquito moth roach scarab silkworm silverfish spider stickbug '
          'termite wasp waterbug weevil ').split()
 
-'''
-word_list_places = ('Afghanistan Albania Algeria Andorra Angola Argentina Armenia Australia Austria Azerbaijan '
+word_list_food = ('apple banana cherry orange lemon grap mango watermelon ramen rice pork chicken soup '
+                  'yogurt milk beetroot pickles burger sandwich risotto spaghetti pasta macaroni ravioli '
+                  'konjac grapefruit chocolate strawberry blueberry raspberry ketchup mustard sausage '
+                  'mushroom onion pepper chili curry lettuce cucumber cabbage mayonnaise salad cake pizza '
+                  'taco fries lasagna salt cheesecake cookies biscuit pepperoni pineapple coconut durian '
+                  'marzipan meringue bolognese pesto hummus carrot zucchini venison honey pancakes waffles '
+                  'nutella peanut butter cheese cheddar fetta spinach mozzarella gorgonzola steak milkshake '
+                  'juice alcohol coffee meat bruschetta bread whiskey popsicle corndog popcorn candy toast '
+                  'brandy arancini tteokbokki sushi onigiri tangerine plum peach eggplant garlic vinegar '
+                  'takoyaki crackers beef chickpea pie profiteroles croissant donut syrup lychee rambutan dumpling '
+                  'gyoza wafers paella pannacotta chips wine tomato potato passionfruit dragonfruit nectarine '
+                  'pudding mochi smoothie lollipop cream vanilla ice matcha soda rosemary basil thyme cinnamon '
+                  'papaya rockmelon ginger beans espresso latte frappe pear mandarine honeydew cantaloupe '
+                  'apricot cauliflower broccoli pumpkin asparagus shallot tofu flour peas kale jackfruit '
+                  'pomegranate starfruit lime corn artichoke avocado celery radish daikon leek parsnip '
+                  'rhubarb squash chestnut almond macadamia cashew hazelnut pecan pistachio sesame walnut '
+                  'nutmeg ').split
+
+word_list_countries = ('Afghanistan Albania Algeria Andorra Angola Argentina Armenia Australia Austria Azerbaijan '
                     'Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bhutan Bolivia Bosnia '
                     'Botswana Brazil Brunei Bulgaria Burma Burundi Cambodia Cameroon Canada Chad Chile China Comoros'
                     'Croatia Cuba Cyprus Czechia Denmark Djibouti Dominica Ecuador Egypt Eritrea Estonia Eswatini '
@@ -29,11 +46,10 @@ word_list_places = ('Afghanistan Albania Algeria Andorra Angola Argentina Armeni
                     'Ukraine UnitedArabEmirates UnitedKingdom England Britain America Uruguay Uzbekistan Vanuatu VaticanCity '
                     'Venezuela Vietnam Yemen Zambia Zimbabwe '
                     '').split()
-'''
 
 word_list_misc = ('about, above, abuse, accept, accident, accuse, across, activist, actor, administration, '
                   'admit, adult, advertise, advise, affect, afraid, after, again, against, agency, aggression, '
-                  'agree, agriculture, force, airplane, airport, album, alcohol, alive, almost, alone, along, '
+                  'agree, agriculture, force, airplane, airport, album, alive, almost, alone, along, '
                   'already, although, always, ambassador, amend, ammunition, among, amount, anarchy, ancestor, '
                   'ancient, anger, animal, anniversary, announce, another, answer, apologize, appeal, appear, '
                   'appoint, approve, archeology, argue, around, arrest, arrive, artillery, assist, astronaut, '
@@ -46,7 +62,7 @@ word_list_misc = ('about, above, abuse, accept, accident, accuse, across, activi
                   'capture, career, careful, carry, catch, cause, ceasefire, celebrate, center, century, ceremony, '
                   'chairman, champion, chance, change, charge, chase, cheat, cheer, chemicals, chemistry, chief, child, '
                   'children, choose, circle, citizen, civilian, civil, rights, claim, clash, class, clean, clear, clergy, '
-                  'climate, climb, clock, close, cloth, clothes, cloud, coalition, coast, coffee, collapse, collect, college, '
+                  'climate, climb, clock, close, cloth, clothes, cloud, coalition, coast, collapse, collect, college, '
                   'colony, color, combine, command, comment, committee, common, communicate, community, company, compare, '
                   'compete, complete, complex, compromise, computer, concern, condemn, condition, conference, confirm, '
                   'conflict, congratulate, Congress, connect, conservative, consider, constitution, contact, contain, '
